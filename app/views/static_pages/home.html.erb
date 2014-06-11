@@ -1,2 +1,8 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Home</h1>
+
+<% if user_signed_in? %>
+<h3> hello <%= current_user.email %> </h3>
+<% end %>
+<%= link_to 'New Fetch', new_fetch_path %>
+
+<%= link_to 'Show Fetches', fetches_path %>

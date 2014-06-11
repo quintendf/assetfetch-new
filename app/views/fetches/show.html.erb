@@ -20,6 +20,18 @@
   <%= @fetch.deadline %>
 </p>
 
+<%= nested_form_for @fetch, :html => {:multipart => true} do |f| %>
+
+<%= f.fields_for :tasks do |task_form| %>
+  <%= task_form.text_field :name %>
+  <%= task_form.text_field :type_name %>
+  <%= task_form.file_field :file %>
+  <%= task_form.link_to_remove "Remove this task" %>
+<% end %>
+<p><%= f.link_to_add "Add a task", :tasks %></p>
+
+<p><%= f.submit %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_fetch_path(@fetch) %> |
 <%= link_to 'Back', fetches_path %>

@@ -1,9 +1,15 @@
 Assetfetch::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  devise_for :users
+  ActiveAdmin.routes(self)
+
   get "static_pages/home"
 
   resources :fetches
 
-  root :to => 'static_pages#index'
+  root :to => 'static_pages#home'
 
 
   # The priority is based upon order of creation:

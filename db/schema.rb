@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140611143506) do
+ActiveRecord::Schema.define(:version => 20140611203216) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -51,19 +51,19 @@ ActiveRecord::Schema.define(:version => 20140611143506) do
     t.string   "recipient"
     t.text     "cc"
     t.datetime "deadline"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "tasks", :force => true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "type_name"
     t.integer  "fetch_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "file"
   end
-
-  add_index "tasks", ["fetch_id"], :name => "index_tasks_on_fetch_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
