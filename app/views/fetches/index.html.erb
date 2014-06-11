@@ -1,0 +1,29 @@
+<h1>Listing fetches</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Recipient</th>
+    <th>Cc</th>
+    <th>Deadline</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fetches.each do |fetch| %>
+  <tr>
+    <td><%= fetch.title %></td>
+    <td><%= fetch.recipient %></td>
+    <td><%= fetch.cc %></td>
+    <td><%= fetch.deadline %></td>
+    <td><%= link_to 'Show', fetch %></td>
+    <td><%= link_to 'Edit', edit_fetch_path(fetch) %></td>
+    <td><%= link_to 'Destroy', fetch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fetch', new_fetch_path %>

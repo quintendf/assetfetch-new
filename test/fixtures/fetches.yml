@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  recipient: MyString
+  cc: MyText
+  deadline: 2014-06-11 10:35:07
+
+two:
+  title: MyString
+  recipient: MyString
+  cc: MyText
+  deadline: 2014-06-11 10:35:07
