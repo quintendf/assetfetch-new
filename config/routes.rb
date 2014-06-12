@@ -7,7 +7,9 @@ Assetfetch::Application.routes.draw do
 
   get "static_pages/home"
 
-  resources :fetches
+  resources :fetches do
+  resources :tasks
+  end
 
   root :to => 'static_pages#home'
 

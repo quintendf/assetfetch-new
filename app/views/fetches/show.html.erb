@@ -19,6 +19,12 @@
   <b>Deadline:</b>
   <%= @fetch.deadline %>
 </p>
+  <b>Tasks:</b>
+  <%= render(:partial => "tasks/index",
+  collection: @tasks ) %>
+</p>
+
+
 
 <%= nested_form_for @fetch, :html => {:multipart => true} do |f| %>
 

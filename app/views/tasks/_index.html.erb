@@ -1,0 +1,8 @@
+<table>
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.name %></td> 
+    <td><%= image_tag task.file_url.to_s %></td> 
+  </tr>
+</table>
+<% end %>

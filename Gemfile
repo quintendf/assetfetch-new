@@ -12,6 +12,10 @@ gem 'turbolinks'
 gem "nested_form"
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 
 
 # Gems used only for assets and not required
