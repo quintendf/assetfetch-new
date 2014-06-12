@@ -16,6 +16,7 @@ gem 'fog'
 gem 'figaro'
 gem 'carrierwave_direct'
 gem 'sidekiq'
+gem 'activerecord-postgres-hstore'
 
 
 # Gems used only for assets and not required

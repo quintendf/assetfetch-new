@@ -30,7 +30,17 @@
   <div class="field">
       <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
-  <div class="actions">
+    <%= nested_form_for @fetch, :html => {:multipart => true} do |f| %>
+
+    <%= f.fields_for :tasks do |task_form| %>
+    <%= task_form.text_area :instructions %>
+    <%= task_form.select :type_name, %w[text_field, file_upload] %>
+    <%= task_form.link_to_remove "Remove this task" %>
+    <% end %>
+    <p><%= f.link_to_add "Add a task", :tasks %></p>
+
+    <div class="actions">
     <%= f.submit %>
+    <% end %>
   </div>
 <% end %>
