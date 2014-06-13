@@ -7,7 +7,5 @@ class FetchesController < InheritedResources::Base
 
     # Access all items for that order
     @tasks = @fetch.tasks
-
-    
   end
 end
