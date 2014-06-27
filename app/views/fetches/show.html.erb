@@ -22,11 +22,12 @@
 </p>
   <b>Tasks:</b>
  <span>
+
    <%= nested_form_for @fetch, :html => {:multipart => true} do |f| %>
 
     <%= f.fields_for :tasks do |task_form| %>
     <h3> <%= task_form.object.instructions %> </h3>
-      <%= render "#{task_form.object.type_name}", f: task_form %>
+      <%= render "tasks/#{task_form.object.type_name}", f: task_form, task: task_form.object %>
     <% end %>
 
   <%= f.submit %>

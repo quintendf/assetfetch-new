@@ -174,7 +174,7 @@ CREATE TABLE tasks (
     fetch_id integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    file character varying(255),
+    file_name character varying(255),
     properties hstore,
     text_answer character varying(255)
 );
@@ -399,3 +399,5 @@ INSERT INTO schema_migrations (version) VALUES ('20140612163346');
 INSERT INTO schema_migrations (version) VALUES ('20140612214011');
 
 INSERT INTO schema_migrations (version) VALUES ('20140626201915');
+
+INSERT INTO schema_migrations (version) VALUES ('20140626213016');

@@ -11,12 +11,13 @@ gem 'activeadmin'
 gem 'turbolinks'
 gem "nested_form"
 gem "meta_search",    '>= 1.1.0.pre'
-gem 'carrierwave'
+gem 'carrierwave', '>= 0.5.3'
 gem 'fog'
 gem 'figaro'
-gem 'carrierwave_direct'
-gem 'sidekiq'
 gem 'activerecord-postgres-hstore'
+gem "therubyracer"
+gem "less-rails"
+
 
 
 # Gems used only for assets and not required
@@ -29,6 +30,8 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
+  
 end
 
 gem "jquery-rails", "< 3.0.0"
