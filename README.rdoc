@@ -1,17 +1,16 @@
 Assetfetch is designed to make the process of collecting assets (documents, contracts, image files, etc) from clients or partners. 
-<p>
+
 It is a work in progress, Although most of the backend has been built out. 
-<p>
+
 I use devise for user authorization, and carrierwave for file uploads to S3. Frontend is in bootstrap for now. Database is postgres, both local and deployment. 
-<p>
+
 From a data model standpoint, Users have many fetches, which in turn have many tasks. Users create new fetches, and assign tasks (in different forms) to the fetch, which has an associated deadline and recipient. 
-<p>
+
 Users define tasks as different types (text field, file upload, etc), and when a fetch is complete and mailed to a receipient, the receipient must complete the fields as defined by the user. 
-<p>
+
 recepients are not currently users, as I plan to send the fetches out by some sort of secret URL.
-<p>
-<ul>To-Do:
-<li>finish mail project</li>
-<li>secret URL's</li>
-<li>frontend and design tasks</li>
-</ul>
+
+To-Do:
+finish mail project
+secret URL's
+frontend and design tasks
