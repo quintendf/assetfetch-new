@@ -10,7 +10,3 @@ Users define tasks as different types (text field, file upload, etc), and when a
 
 recepients are not currently users, as I plan to send the fetches out by some sort of secret URL.
 
-To-Do:
-finish mail project
-secret URL's
-frontend and design tasks
